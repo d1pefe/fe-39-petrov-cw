@@ -1,0 +1,14 @@
+@import "../../assets/colors.module.scss";
+
+.button {
+    padding: 0;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $primary;
+    }
+}

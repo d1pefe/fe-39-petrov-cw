@@ -24,7 +24,7 @@
 .errorBtn {
     @include button();
     color: $error;
-    
+
     &:hover {
         border-color: $medium;
     }
