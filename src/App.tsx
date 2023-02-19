@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import './App.module.scss';
+import Button, {ButtonType} from './components/Button';
+import UserName from './components/UserName';
+import Title from './components/Title';
+import Tabs from './components/Tabs';
+import MenuButton from './components/MenuButton';
 
-const Title = (props: any) => {
-    return <div>{props.text}</div>;
-};
+const App = () => {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header" style={{
-          flexDirection: "column",
-          flex: 1,
-          backgroundColor: "red",
-      }}>
-        <img src={logo} className="App-logo" alt="logo" />
-        <Title text={`Edit src/App.tsx and save to reload.`} />
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Button title={"Primary"} type={ButtonType.Primary} onClick={() => {
+            }}/>
+            <Button title={"Secondary"} type={ButtonType.Secondary} onClick={() => {
+            }}/>
+            <Button title={"Error"} type={ButtonType.Error} onClick={() => {
+            }}/>
+            <UserName userName='Artem Malkin'/>
+            <Title/>
+            <Tabs/>
+            <MenuButton/>
+        </div>
+    );
 }
 
 export default App;
